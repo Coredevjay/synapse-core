@@ -8,6 +8,7 @@ pub mod locks;
 pub mod quota;
 pub mod reconciliation;
 pub mod rules_preview;
+pub mod swap_console;
 pub mod tenant_secret;
 pub mod transaction_notes;
 pub mod webhook_endpoints;

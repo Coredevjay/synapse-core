@@ -438,3 +438,10 @@ fn parse_log_format(raw: &str) -> anyhow::Result<LogFormat> {
         _ => anyhow::bail!("LOG_FORMAT must be 'text' or 'json'"),
     }
 }
+
+/// Keystore selection for envelope encryption of sensitive swap data
+/// (`KEYSTORE_PROVIDER=local|kms|none`). `None` leaves encryption disabled.
+pub fn keystore_config() -> Result<Option<crate::crypto::KeystoreConfig>, crate::crypto::CryptoError>
+{
+    crate::crypto::KeystoreConfig::from_env()
+}
