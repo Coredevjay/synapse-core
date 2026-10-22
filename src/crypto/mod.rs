@@ -3,6 +3,7 @@
 
 pub mod envelope;
 pub mod key_provider;
+pub mod webhook_signing;
 
 pub use envelope::{Envelope, EnvelopeCipher, RotationStatus};
 pub use key_provider::{KeyProvider, KeystoreConfig, KmsClient, KmsKeyProvider, LocalKeyProvider};
